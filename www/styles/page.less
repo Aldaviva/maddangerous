@@ -1,0 +1,93 @@
+body {
+	background: @background;
+	color: white;
+	font: 18px "Gautami", "Gautami_web", "Helvetica", "Arial", "sans-serif";
+
+	> .center {
+		width: 1107px;
+		margin: 114px auto 0;
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+
+	&:hover {
+		color: @yellow;
+	}
+}
+
+header {
+	margin-bottom: 65px;
+}
+
+main {
+	> div {
+		margin-bottom: 15px;
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+	}
+
+	> .left {
+		padding-right: 35px;
+	}
+
+	> .right {
+		padding-left: 35px;
+
+		> div {
+			+ div {
+				border-top: 2px solid @dark_gray;
+				margin-top: 22px;
+				padding-top: 22px;
+			}
+		}
+	}
+}
+
+footer {
+	clear: both;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	padding-top: 26px;
+	border-top: 2px solid @dark_gray;
+
+	> div {
+		width: 50%;
+		height: 16px;
+		line-height: 25px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.left {
+		font-size: 22px;
+		.gray-text(84%);
+	}  
+
+	.right {
+		font-size: 16px;
+		text-align: right;
+		.gray-text(50%);
+	}
+}
+
+.square(@color, @imgSrc) {
+	.square {
+		height: @right_square_size;
+		width: @right_square_size;
+		box-sizing: border-box;
+		border: 2px solid @color;
+		display: inline-block;
+		background: url('../images/@{imgSrc}') no-repeat center center;
+		margin-right: 34px;
+		transition: border-width 0.2s;
+
+		&:hover {
+			border-width: 6px;
+		}
+	}
+}

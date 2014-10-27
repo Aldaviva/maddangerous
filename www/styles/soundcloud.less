@@ -1,0 +1,41 @@
+.soundcloud {
+	.square(#ff5700, "soundcloud_play.png");
+	display: flex;
+	margin-right: -9px;
+	align-items: center;
+
+	.title {
+		flex: 1;
+		font-size: 22px;		
+		text-align: center;
+		margin-right: 34px;
+		line-height: @right_line_height;
+		//flexbox vertical align
+	}
+
+	.artwork {
+		display: inline-block;
+		height: @right_square_size;
+		margin-right: 2px;
+
+		img {
+			max-height: @right_square_size;
+		}
+	}
+
+	.more {
+		background: url('../images/soundcloud_more.png') no-repeat;
+		box-sizing: border-box;
+		color: white;
+		display: inline-block;
+		font-size: 10px;
+		font-weight: bold;
+		height: @right_square_size;
+		line-height: 12px;
+		padding: 44px 22px 0px 17px;
+		text-align: center;
+		text-transform: uppercase;
+		vertical-align: top;
+		width: 83px;
+	}
+}
