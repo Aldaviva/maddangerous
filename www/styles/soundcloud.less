@@ -1,8 +1,13 @@
 .soundcloud {
-	.square(#ff5700, "soundcloud_play.png");
 	display: flex;
 	margin-right: -9px;
 	align-items: center;
+	
+	.square(#ff5700, "soundcloud_play.png");
+
+	.square.playing {
+		background-image: url('../images/soundcloud_pause.png');
+	}
 
 	.title {
 		flex: 1;
