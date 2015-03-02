@@ -25,7 +25,10 @@
 		$('.play', soundcloudEl).attr('title', 'Play '+currentTrack.title);
 		$('.title', soundcloudEl)
 			.text(currentTrack.title)
-			.attr('title', currentTrack.title);
+			.attr({
+				title: currentTrack.title,
+				href: currentTrack.permalink_url
+			});
 		$('.artwork', soundcloudEl).attr({
 			title: currentTrack.title + ' on Soundcloud',
 			href: currentTrack.permalink_url
