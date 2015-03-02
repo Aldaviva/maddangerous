@@ -4,8 +4,29 @@
 	display: flex;
 	align-items: center;
 
-	.tweet_body {
+	.tweet {
 		flex: 1;
+		position: relative;
+	}
+
+	.tweet_body {
 		line-height: @right_line_height;
+	}
+
+	.tweet_metadata {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -16px;
+		font-size: 13px;
+		line-height: 13px;
+
+		&, & a {
+			color: #838383;
+		}
+
+		a:hover {
+			color: @yellow;
+		}
 	}
 }
