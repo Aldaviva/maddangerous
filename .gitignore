@@ -1,5 +1,6 @@
 *.sublime-*
-styles.css
 Thumbs.db
 www/config/*.json
 www/images/photos/*
+/assets
+/comps
