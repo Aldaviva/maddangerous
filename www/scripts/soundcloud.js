@@ -2,7 +2,6 @@
 
 	var CLIENT_ID = "543c75bc4ce430e7b890b20ed0a5712b";
 
-	var currentTrackId = "127312382";
 	var currentTrack = null;
 	var soundcloudEl = $('.soundcloud');
 	var isPlaying = false;
@@ -15,9 +14,38 @@
 			client_id: CLIENT_ID
 		});
 
-		$.getJSON("http://api.soundcloud.com/tracks/"+currentTrackId+".json?client_id="+CLIENT_ID, function(track){
-			currentTrack = track;
-			render();
+		getCurrentTrackId(function(currentTrackId){
+			$.getJSON("http://api.soundcloud.com/tracks/"+currentTrackId+".json?client_id="+CLIENT_ID, function(track){
+				currentTrack = track;
+				render();
+			});
+		});
+	}
+
+	function getCurrentTrackId(callback){
+		$.getJSON("/config/soundcloud.json", function(soundcloudConfig){
+			var trackUrl = soundcloudConfig.trackUrl || "https://soundcloud.com/maddangerous/state-of-the-danger-2013";
+			var urlParser = document.createElement("a");
+			urlParser.href = trackUrl;
+			var urlPathComponents = urlParser.pathname.split(/\//);
+			var artistPermalink = urlPathComponents[0];
+			var trackPermalink = urlPathComponents[1];
+
+			$.getJSON("http://api.soundcloud.com/users/?q="+artistPermalink+"&client_id="+CLIENT_ID, function(artistSearchResults){
+
+				var artist = artistSearchResults.filter(function(item){
+					return item.permalink === artistPermalink;
+				})[0];
+
+				$.getJSON("http://api.soundcloud.com/users/"+artist.id+"/tracks?client_id="+CLIENT_ID, function(tracks){
+					var track = tracks.filter(function(item){
+						return item.permalink === trackPermalink;
+					})[0];
+
+					var trackId = track.id;
+					callback(trackId);
+				});
+			});
 		});
 	}
 
@@ -35,7 +63,7 @@
 		});
 		$('.artwork img', soundcloudEl).attr({
 			alt: currentTrack.title + ' album art',
-			src: currentTrack.artwork_url //use default large (100x100) size
+			src: currentTrack.artwork_url || currentTrack.user.avatar_url //use default large (100x100) size
 		});
 	}
 

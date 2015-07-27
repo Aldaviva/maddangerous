@@ -10,6 +10,7 @@
 
 	figcaption {
 		.gray-text(50%);
+		display: none; //shown by photo.js if a caption exists
 		font-size: 11px;
 		height: 0px;
 		position: absolute;
@@ -23,6 +24,7 @@
 		-webkit-transform: rotate(@angle);
 		-moz-transform: rotate(@angle);
 		-o-transform: rotate(@angle);
+		transform: rotate(@angle);
 		-webkit-transform-origin: 0 0;
 		-moz-transform-origin: 0 0;
 		-o-transform-origin: 0 0;

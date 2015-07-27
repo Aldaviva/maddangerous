@@ -1,0 +1,353 @@
+/*
+YUI 2: Reset CSS
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+p,
+blockquote,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+button,
+caption,
+cite,
+code,
+dfn,
+em,
+input,
+optgroup,
+option,
+select,
+strong,
+textarea,
+th,
+var {
+  font: inherit;
+}
+del,
+ins {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: baseline;
+}
+sub {
+  vertical-align: baseline;
+}
+legend {
+  color: #000000;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+a::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input:-moz-ui-invalid {
+  box-shadow: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+@font-face {
+  font-family: 'Gautami_web';
+  src: url('../fonts/gautami.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gautami_web';
+  src: url('../fonts/gautamib.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background: #1a1a1a;
+  color: white;
+  font: 18px "Gautami", "Gautami_web", "Helvetica", "Arial", "sans-serif";
+}
+body > .center {
+  width: 1107px;
+  margin: 114px auto 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #e4e226;
+}
+header {
+  margin-bottom: 65px;
+}
+header object {
+  width: 100%;
+}
+main > div {
+  margin-bottom: 15px;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+main > .left {
+  padding-right: 35px;
+}
+main > .right {
+  padding-left: 35px;
+}
+main > .right > div + div {
+  border-top: 2px solid #2c2c2c;
+  margin-top: 22px;
+  padding-top: 22px;
+}
+footer {
+  clear: both;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 26px 0 16px;
+  border-top: 2px solid #2c2c2c;
+}
+footer > div {
+  width: 50%;
+  height: 16px;
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer .left {
+  font-size: 22px;
+  color: #d6d6d6;
+}
+footer .right {
+  font-size: 16px;
+  text-align: right;
+  color: #808080;
+}
+.photo {
+  margin-right: 15px;
+  position: relative;
+}
+.photo img {
+  max-width: 100%;
+}
+.photo figcaption {
+  color: #808080;
+  display: none;
+  font-size: 11px;
+  height: 0px;
+  position: absolute;
+  right: -2px;
+  text-transform: lowercase;
+  white-space: nowrap;
+  width: 0px;
+  bottom: 15px;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  writing-mode: lr-tb;
+}
+.photo figcaption a {
+  color: #bfbfbf;
+}
+.photo figcaption a:hover {
+  color: #e4e226;
+}
+.soundcloud {
+  display: -webkit-flex;
+  display: flex;
+  margin-right: -9px;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.soundcloud .square {
+  height: 74px;
+  width: 74px;
+  box-sizing: border-box;
+  border: 2px solid #ff5700;
+  display: inline-block;
+  background: url('../images/soundcloud_play.png') no-repeat center center;
+  margin-right: 34px;
+  transition: border-width 0.2s;
+}
+.soundcloud .square:hover {
+  border-width: 6px;
+}
+.soundcloud .square.playing {
+  background-image: url('../images/soundcloud_pause.png');
+}
+.soundcloud .title {
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 22px;
+  text-align: center;
+  margin-right: 34px;
+  line-height: 24px;
+}
+.soundcloud .artwork {
+  display: inline-block;
+  height: 74px;
+  margin-right: 2px;
+}
+.soundcloud .artwork img {
+  height: 74px;
+  width: 74px;
+}
+.soundcloud .more {
+  background: url('../images/soundcloud_more.png') no-repeat;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  height: 74px;
+  line-height: 12px;
+  padding: 44px 22px 0px 17px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 83px;
+}
+.twitter {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.twitter .square {
+  height: 74px;
+  width: 74px;
+  box-sizing: border-box;
+  border: 2px solid #55acee;
+  display: inline-block;
+  background: url('../images/twitter.png') no-repeat center center;
+  margin-right: 34px;
+  transition: border-width 0.2s;
+}
+.twitter .square:hover {
+  border-width: 6px;
+}
+.twitter .tweet {
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+}
+.twitter .tweet_body {
+  line-height: 24px;
+}
+.twitter .tweet_metadata {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  font-size: 13px;
+  line-height: 13px;
+}
+.twitter .tweet_metadata,
+.twitter .tweet_metadata a {
+  color: #838383;
+}
+.twitter .tweet_metadata a:hover {
+  color: #e4e226;
+}
+.calendar {
+  display: flex;
+  align-items: center;
+}
+.calendar .square {
+  height: 74px;
+  width: 74px;
+  box-sizing: border-box;
+  border: 2px solid #77bd00;
+  display: inline-block;
+  background: url('../images/calendar.png') no-repeat center center;
+  margin-right: 34px;
+  transition: border-width 0.2s;
+}
+.calendar .square:hover {
+  border-width: 6px;
+}
+.calendar .calendar_event {
+  flex: 1;
+  line-height: 24px;
+}
