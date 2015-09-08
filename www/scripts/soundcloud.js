@@ -27,7 +27,7 @@
 			var trackUrl = soundcloudConfig.trackUrl || "https://soundcloud.com/maddangerous/state-of-the-danger-2013";
 			var urlParser = document.createElement("a");
 			urlParser.href = trackUrl;
-			var urlPathComponents = urlParser.pathname.split(/\//);
+			var urlPathComponents = urlParser.pathname.replace(/^\/+/, "").split(/\//);
 			var artistPermalink = urlPathComponents[0];
 			var trackPermalink = urlPathComponents[1];
 
