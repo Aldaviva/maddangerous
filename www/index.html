@@ -66,17 +66,20 @@
 				><div class="right">
 					<a href="mailto:md@maddangero.us">Contact</a>
 					&middot;
-					<a href="mailinglist.html">Join Mailing List</a>
+					<a class="mailinglist" href="#">Join Mailing List</a>
 				</div>
 			</footer>
 		</div>
 
+		<!-- moment must preceed mailchimp because of AMD bullshit -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+		<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="http://connect.soundcloud.com/sdk.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 		<script src="scripts/soundcloud.js"></script>
 		<script src="scripts/twitter.js"></script>
 		<script src="scripts/calendar.js"></script>
 		<script src="scripts/photo.js"></script>
+		<script src="scripts/mailinglist.js"></script>
 	</body>
 </html>
